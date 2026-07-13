@@ -1,0 +1,346 @@
+/*==============================================================
+Sales Forecasting & Demand Intelligence System
+Enterprise UI Theme
+Author : Ravindra Nathtagoor
+Inspired by Microsoft Fabric & Power BI
+==============================================================*/
+
+/* ================================
+Google Font
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ================================
+Root Variables
+================================ */
+
+:root{
+
+--background:#0B1220;
+
+--surface:#111827;
+
+--card:#1F2937;
+
+--primary:#2563EB;
+
+--secondary:#3B82F6;
+
+--success:#22C55E;
+
+--warning:#F59E0B;
+
+--danger:#EF4444;
+
+--text:#F9FAFB;
+
+--muted:#94A3B8;
+
+--radius:18px;
+
+}
+
+/* ================================
+Main App
+================================ */
+
+html,
+body,
+[class*="css"]{
+
+font-family:'Inter',sans-serif;
+
+background:var(--background);
+
+color:var(--text);
+
+}
+
+/* ================================
+Main Container
+================================ */
+
+.main{
+
+padding:2rem;
+
+background:var(--background);
+
+}
+
+/* ================================
+Sidebar
+================================ */
+
+section[data-testid="stSidebar"]{
+
+background:var(--surface);
+
+border-right:1px solid rgba(255,255,255,.08);
+
+}
+
+section[data-testid="stSidebar"] *{
+
+color:white;
+
+}
+
+/* ================================
+Header
+================================ */
+
+.enterprise-header{
+
+background:linear-gradient(
+90deg,
+#1E3A8A,
+#2563EB
+);
+
+padding:20px;
+
+border-radius:18px;
+
+margin-bottom:25px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.30);
+
+}
+
+.enterprise-title{
+
+font-size:34px;
+
+font-weight:800;
+
+color:white;
+
+}
+
+.enterprise-subtitle{
+
+font-size:15px;
+
+color:#E5E7EB;
+
+}
+
+/* ================================
+Glass Card
+================================ */
+
+.glass-card{
+
+background:rgba(255,255,255,.04);
+
+/* Support for Safari (iOS and macOS) */
+-webkit-backdrop-filter: blur(16px);
+backdrop-filter: blur(16px);
+
+border-radius:18px;
+
+padding:22px;
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:0 8px 30px rgba(0,0,0,.30);
+
+margin-bottom:20px;
+
+transition:.35s;
+
+}
+
+.glass-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 18px 35px rgba(37,99,235,.30);
+
+}
+
+/* ================================
+Metric Cards
+================================ */
+
+.metric-card{
+
+background:linear-gradient(
+145deg,
+#1F2937,
+#273449
+);
+
+padding:22px;
+
+border-radius:18px;
+
+box-shadow:0 12px 28px rgba(0,0,0,.35);
+
+border-left:6px solid var(--primary);
+
+transition:.30s;
+
+}
+
+.metric-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.metric-title{
+
+font-size:15px;
+
+font-weight:600;
+
+color:var(--muted);
+
+}
+
+.metric-value{
+
+font-size:34px;
+
+font-weight:800;
+
+color:white;
+
+margin-top:8px;
+
+}
+
+.metric-change{
+
+color:var(--success);
+
+font-weight:600;
+
+margin-top:5px;
+
+}
+
+/* ================================
+Buttons
+================================ */
+
+.stButton>button{
+
+width:100%;
+
+background:linear-gradient(
+90deg,
+#2563EB,
+#3B82F6
+);
+
+color:white;
+
+border:none;
+
+padding:14px;
+
+font-weight:700;
+
+border-radius:14px;
+
+transition:.30s;
+
+}
+
+.stButton>button:hover{
+
+transform:scale(1.02);
+
+box-shadow:0 12px 25px rgba(37,99,235,.40);
+
+}
+
+/* ================================
+DataFrame
+================================ */
+
+[data-testid="stDataFrame"]{
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ================================
+Plotly
+================================ */
+
+.js-plotly-plot{
+
+border-radius:18px;
+
+background:var(--card);
+
+padding:10px;
+
+}
+
+/* ================================
+Section Titles
+================================ */
+
+.section-title{
+
+font-size:26px;
+
+font-weight:700;
+
+margin-bottom:18px;
+
+color:white;
+
+}
+
+/* ================================
+Footer
+================================ */
+
+.footer{
+
+text-align:center;
+
+padding:30px;
+
+color:#94A3B8;
+
+font-size:14px;
+
+margin-top:40px;
+
+}
+
+/* ================================
+Scrollbar
+================================ */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#2563EB;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0B1220;
+
+}

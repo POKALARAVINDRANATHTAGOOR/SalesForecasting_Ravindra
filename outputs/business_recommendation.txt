@@ -1,0 +1,5 @@
+Recommended Model : SARIMA
+RMSE : 19950.07
+MAE : 19244.49
+MAPE : 20.53%
+R2 Score : -0.2398
