@@ -78,22 +78,7 @@ ICONS = {
     "error": "❌",
 }
 
-# ---------------------------------------------------------
-# Page Configuration
-# ---------------------------------------------------------
 
-def configure_page():
-    """
-    Configure Streamlit page.
-    Call this ONCE at the top of app.py.
-    """
-
-    st.set_page_config(
-        page_title="Sales Intelligence Workspace",
-        page_icon="📊",
-        layout="wide",
-        initial_sidebar_state="expanded",
-    )
 
 # ---------------------------------------------------------
 # Load CSS
@@ -132,9 +117,7 @@ PLOTLY_LAYOUT = {
 
 def apply_theme():
     """
-    Configure page + load css.
+     load css.
     """
-
-    configure_page()
 
     load_css()

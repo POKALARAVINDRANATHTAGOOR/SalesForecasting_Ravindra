@@ -22,39 +22,63 @@ Interactive dashboard for
 
 ==============================================================
 """
-from PIL import Image
 import streamlit as st
-from streamlit_option_menu import option_menu
-from src.dashboard_utils import *
-from src.model_evaluation import ForecastEvaluation
-
-from src.anomaly_detection import AnomalyDetection
-
-from src.clustering import ProductClustering
-from src.theme import apply_theme
-from src.components import (
-    enterprise_header,
-    section_title,
-    footer,
-    kpi_card,
-    recommendation_card,
-)
+from PIL import Image
 from pathlib import Path
 
-LOGO = Path("assets/logo.png")
-
-logo = Image.open(LOGO)
-apply_theme()
 st.set_page_config(
     page_title="Sales Intelligence Workspace",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
 )
-st.image(
-    logo,
-    width=220
+
+# All remaining imports
+from streamlit_option_menu import option_menu
+from src.dashboard_utils import (
+    load_sales_data,
+    sidebar_filters,
+    show_kpis,
+    ai_business_summary,
+    monthly_sales_chart,
+    category_sales_chart,
+    region_sales_chart,
+    top_products,
+    forecast_accuracy,
+    show_forecast_metrics,
+    interactive_xgboost,
+    future_forecast_table,
+    forecast_insights,
+    show_anomalies,
+    interactive_anomaly_chart,
+    anomaly_insights,
+    show_clusters,
+    cluster_distribution,
+    cluster_scatter,
+    interactive_cluster_chart,
+    cluster_insights,
+    executive_summary,
+    best_model_summary,
+    show_reports,
+    load_csv,
+    download_csv,
+    footer,
 )
+from src.model_evaluation import ForecastEvaluation
+from src.anomaly_detection import AnomalyDetection
+from src.clustering import ProductClustering
+from src.theme import apply_theme
+from src.components import (
+    enterprise_header,
+    section_title,
+    kpi_card,
+    recommendation_card,
+)
+
+LOGO = Path("assets/logo.png")
+logo = Image.open(LOGO)
+
+apply_theme()
 
 st.markdown(
     """
@@ -133,8 +157,6 @@ Business Analytics
 """
 )
 sales = load_sales_data()
-st.sidebar.title("Navigation")
-
 page = option_menu(
     menu_title="Navigation",
     options=[
@@ -143,6 +165,7 @@ page = option_menu(
         "Anomaly Detection",
         "Demand Segmentation",
         "Reports",
+        "Downloads"
         "About",
     ],
     icons=[

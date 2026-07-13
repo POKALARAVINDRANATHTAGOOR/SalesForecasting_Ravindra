@@ -51,6 +51,21 @@ from src.components import (
     recommendation_card,
 )
 OUTPUT_DIR = ROOT_DIR / "outputs"
+# ==========================================================
+# Section Title
+# ==========================================================
+
+def section_title(title):
+
+    st.markdown(
+        f"""
+<div class="section-title">
+{title}
+</div>
+""",
+        unsafe_allow_html=True,
+    )
+
 # ---------------------------------------------------------
 # Load Dataset
 # ---------------------------------------------------------
@@ -1410,18 +1425,7 @@ Deploy the model with the lowest RMSE.
 Healthy
 """
     )
-# ---------------------------------------------------------
-# Section Header
-# ---------------------------------------------------------
 
-def section_title(title):
-    """
-    Dashboard section title.
-    """
-
-    st.markdown("---")
-
-    st.subheader(title)
 # ---------------------------------------------------------
 # Footer
 # ---------------------------------------------------------
@@ -1470,29 +1474,4 @@ Developed by
 Ravindra Nathtagoor
 """
     )
-# ---------------------------------------------------------
-# Dashboard Theme
-# ---------------------------------------------------------
-
-def page_configuration():
-    """
-    Configure Streamlit page.
-    """
-
-    st.set_page_config(
-
-        page_title="Sales Forecasting Dashboard",
-
-        page_icon="📈",
-
-        layout="wide",
-
-        initial_sidebar_state="expanded"
-
-    )
-if __name__ == "__main__":
-    print("=" * 60)
-    print("Dashboard Utilities Loaded Successfully")
-    print("=" * 60)
-
-    print(load_csv("evaluation_results.csv").head())
+ 

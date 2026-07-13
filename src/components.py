@@ -3,7 +3,7 @@
 Project : End-to-End Sales Forecasting & Demand Intelligence
 Module  : Enterprise UI Components
 Author  : Ravindra Nathtagoor
-Version : 2.0
+Version : 1.0
 ==============================================================
 """
 
@@ -211,35 +211,3 @@ def error(message):
 def divider():
 
     st.markdown("---")
-
-
-# ==========================================================
-# Footer
-# ==========================================================
-
-def footer():
-
-    st.markdown(
-        """
-<div class="footer">
-
-Sales Forecasting & Demand Intelligence System
-
-<br>
-
-Powered by
-
-Python • Streamlit • Plotly • SARIMA • Prophet • XGBoost
-
-<br><br>
-
-Developed by <b>Ravindra Nathtagoor</b>
-
-<br>
-
-Version 1.0 Enterprise Edition
-
-</div>
-""",
-        unsafe_allow_html=True,
-    )
