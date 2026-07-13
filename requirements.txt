@@ -1,63 +1,46 @@
-# ======================================================
-# End-to-End Sales Forecasting & Demand Intelligence System
-# Author: Ravindra Nathtagoor
-# Python: 3.10+
-# ======================================================
 # ==========================
 # Core Libraries
 # ==========================
-numpy==1.26.4
-pandas==2.2.2
-scipy==1.13.1
+numpy>=1.26,<2.0
+pandas>=2.2,<2.3
+scipy>=1.13,<1.14
+
 # ==========================
-# Data Visualization
+# Visualization
 # ==========================
-matplotlib==3.9.0
-seaborn==0.13.2
-plotly==5.22.0
+matplotlib>=3.9,<3.10
+plotly>=5.22,<6.0
+seaborn>=0.13,<0.14
+
 # ==========================
 # Machine Learning
 # ==========================
-scikit-learn==1.5.1
-xgboost==2.1.1
-joblib==1.4.2
-threadpoolctl==3.5.0
+scikit-learn>=1.5,<1.6
+xgboost>=2.1,<2.2
+joblib>=1.4
+
 # ==========================
-# Time Series Forecasting
+# Time Series
 # ==========================
-statsmodels==0.14.2
-prophet==1.1.5
+statsmodels>=0.14,<0.15
+prophet>=1.1.5
+
 # ==========================
-# Streamlit Dashboard
+# Streamlit
 # ==========================
-streamlit==1.36.0
-streamlit-option-menu==0.3.13
-streamlit-extras==0.5.0
-# Optional (if used)
-hydralit-components==1.0.10
-streamlit-lottie==0.0.5
-# ==========================
-# Image Processing
-# ==========================
-Pillow==10.4.0
-# ==========================
-# Excel Support
-# ==========================
-openpyxl==3.1.5
-xlrd==2.0.1
-# ==========================
-# Notebook
-# ==========================
-jupyter==1.0.0
-notebook==7.2.1
-ipykernel==6.29.5
+streamlit>=1.36
+streamlit-option-menu>=0.3.13
+
 # ==========================
 # Utilities
 # ==========================
-requests==2.32.4
-beautifulsoup4==4.12.3
-python-dateutil==2.9.0.post0
-pytz==2024.1
-tqdm==4.66.4
-PyYAML==6.0.2
-protobuf==5.29.6
+Pillow>=10.4
+openpyxl>=3.1
+xlrd>=2.0
+requests>=2.32
+beautifulsoup4>=4.12
+python-dateutil>=2.9
+pytz>=2024.1
+tqdm>=4.66
+PyYAML>=6.0.2
+protobuf>=5.29
